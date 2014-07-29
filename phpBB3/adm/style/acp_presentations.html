@@ -1,0 +1,70 @@
+<!-- INCLUDE overall_header.html -->
+
+<a name="maincontent"></a>
+
+<h1>{L_ACP_PRESENTATIONS_CONFIG_SETTINGS}</h1>
+
+<p>{L_ACP_PRESENTATIONS_CONFIG_SETTINGS_EXPLAIN}</p>
+
+<!-- IF S_VERSIONCHECK -->
+<!-- BEGIN mods -->
+
+	<fieldset>
+		<legend>{L_VERSION_CHECK}</legend>
+		<p style="font-weight: bold; color: <!-- IF mods.S_UP_TO_DATE -->#228822<!-- ELSE -->#BC2A4D<!-- ENDIF -->;">{mods.UP_TO_DATE}</p>
+		<dl>
+			<dt><label>{L_CURRENT_VERSION}</label></dt>
+			<dd><strong>{mods.CURRENT_VERSION}</strong></dd>
+		</dl>
+		<dl>
+			<dt><label>{L_LATEST_VERSION}</label></dt>
+			<dd><strong>{mods.LATEST_VERSION}</strong></dd>
+		</dl>
+		<!-- IF not mods.S_UP_TO_DATE -->
+			<dl>
+				<dt><label>{L_DOWNLOAD_LATEST}</label></dt>
+				<dd><strong><a href="{mods.DOWNLOAD}">{L_DOWNLOAD} {mods.TITLE} {mods.LATEST_VERSION}</a></strong></dd>
+			</dl>
+			<dl>
+				<dt><label>{L_ANNOUNCEMENT_TOPIC}</label></dt>
+				<dd><strong><a href="{mods.ANNOUNCEMENT}">{L_RELEASE_ANNOUNCEMENT}</a></strong></dd>
+			</dl>
+		<!-- ENDIF -->
+	</fieldset>
+<!-- END mods -->
+<!-- ENDIF -->
+<form id="acp_presentations" method="post" action="{U_ACTION}">
+
+<fieldset>
+	<legend>{L_ACP_PRESENTATIONS_CONFIG_SETTINGS}</legend>
+		<dl>
+			<dt><label for="presentations_post_enable">{L_ACP_PRESENTATIONS_POST_ENABLE}</label><br />{L_ACP_PRESENTATIONS_POST_ENABLE_EXPLAIN}</dt>
+			<dd><input type="radio" class="radio" name="presentations_post_enable" value="1" <!-- IF PRESENTATIONS_POST_ENABLE -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp; 
+				<input type="radio" class="radio" name="presentations_post_enable" value="0" <!-- IF not PRESENTATIONS_POST_ENABLE -->checked="checked"<!-- ENDIF --> /> {L_NO}</dd>
+		</dl>	
+		<dl>
+			<dt><label for="presentations_view_enable">{L_ACP_PRESENTATIONS_VIEW_ENABLE}</label><br />{L_ACP_PRESENTATIONS_VIEW_ENABLE_EXPLAIN}</dt>
+			<dd><input type="radio" class="radio" name="presentations_view_enable" value="1" <!-- IF PRESENTATIONS_VIEW_ENABLE -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp; 
+				<input type="radio" class="radio" name="presentations_view_enable" value="0" <!-- IF not PRESENTATIONS_VIEW_ENABLE -->checked="checked"<!-- ENDIF --> /> {L_NO}</dd>
+		</dl>			
+        <dl>
+	        <dt><label for="presentations_forum">{L_ACP_PRESENTATIONS_FORUM}:</label><br />{L_ACP_PRESENTATIONS_FORUM_EXPLAIN}</dt>
+			<dd><input class="post" type="text" maxlength="3" size="2" name="presentations_forum" value="{PRESENTATIONS_FORUM}" /></dd>	
+		</dl>	
+		<dl>
+			<dt><label for="presentations_form_enable">{L_ACP_PRESENTATIONS_FORM_ENABLE}</label><br />{L_ACP_PRESENTATIONS_FORM_ENABLE_EXPLAIN}</dt>
+			<dd><input type="radio" class="radio" name="presentations_form_enable" value="1" <!-- IF PRESENTATIONS_FORM_ENABLE -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp; 
+				<input type="radio" class="radio" name="presentations_form_enable" value="0" <!-- IF not PRESENTATIONS_FORM_ENABLE -->checked="checked"<!-- ENDIF --> /> {L_NO}</dd>
+		</dl>		
+
+<p class="submit-buttons">
+	<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+	<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+</p>
+{S_FORM_TOKEN}
+</fieldset>
+</form>
+
+<br />
+
+<!-- INCLUDE overall_footer.html -->

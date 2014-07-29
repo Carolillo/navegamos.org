@@ -1,0 +1,4 @@
+.htaccess
+config.*
+*.config.*
+error_log

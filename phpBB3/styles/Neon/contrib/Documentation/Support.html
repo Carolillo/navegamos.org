@@ -1,0 +1,91 @@
+<html>
+<style type="text/css">
+
+html, body {
+    width : 900px;
+    margin: auto;
+    padding: auto;
+    background-color: #F0F0F0;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+#logo {
+    margin-top : 20px;
+}
+
+#bottom {
+    margin-bottom : 25px;
+}
+</style>
+
+<body>
+<div id="logo"><img src="images/site_logo.png" /></div>
+
+<h2><u>OVERVIEW</u></h2>
+
+<p>Hey, thank you for downloading Neon. If you have any questions, please don't hesitate to contact me : 4ris@4ris.info</p>
+<p>This is an elegant, modern and unique theme that will look great on any community. Neon is suitable for PhpBB 3.0.9 but it can also be used in older version but its not recommended.</p>
+<p>I hope you like it. :)</p>
+
+<h2><u>.PSD</u></h2>
+<p>I've included just 4 PSD files :</p>
+<ul><li><b>Logo-Neon.psd</b> | The Logo</li></ul>
+<ul><li><b>Login-Button.psd</b> | The Login Button</li></ul>
+<ul><li><b>Register-Button.psd</b> | The Register Button</li></ul>
+<ul><li><b>Row.psd</b> | Row Image</li></ul>
+
+<h2><u># IMPORTANT # AVATAR ON BOARD INDEX</u></h2>
+<p>This is an important change you must do. Please follow these steps :</p>
+<ul><b>1)</b> In the main PhpBB folder you will find idex.php. Open it.</ul>
+<ul><b>1)</b> <b>You will find </b> <br />'NEWEST_USER'	=> sprintf($user->lang['NEWEST_USER'], get_username_string('full', $config['newest_user_id'], $config['newest_username'], $config['newest_user_colour'])), <br /> <b>and you will add below  </b> <br />  'USER_AVATAR'   => get_user_avatar($user->data['user_avatar'], $user->data['user_avatar_type'], $user->data['user_avatar_width'], $user->data['user_avatar_height']), .</ul>
+<img src="images/ic.png" />
+
+
+<h2><u>CHANGE THE LOGO</u></h2>
+<p>To change the logo you have to do the following :</p>
+<ul><b>1)</b> You will find the logo in styles/Neon/imageset/site_logo (PNG).</ul>
+<ul><b>2)</b> Upload your logo to styles/Neon/imageset .</ul>
+<ul><b>3)</b> If your logo is bigger than 320x120 you will open styles/Neon/imageset/imageset.cfg and you will edit the img_site_logo = site_logo.png*120*320 (line 25).</ul>
+
+<h2><u>CHANGE THE FOOTER COPYRIGHT</u></h2>
+<p>To change the footer copyright (© 2011 Yourdomain.com) you have to do the following :</p>
+<ul><b>1)</b> You will open styles/Neon/template/overall_footer.html .</ul>
+<ul><b>2)</b> Find 	&copy; 2011 Yourdomain.com and change it.</ul>
+<img src="images/fc.png" />
+
+<h2><u>CHANGE THE BACKGROUND IMAGE</u></h2>
+<p>To customize the background you have to do the following :</p>
+<ul><b>1)</b> You will open styles/Neon/theme/colours.css .</ul>
+<ul><b>2)</b> Find 	html, body {background: url("{T_THEME_PATH}/images/square_bg.png") } and change it.</ul>
+<img src="images/cb.png" />
+
+<h2><u>CHANGE THE SOCIAL MEDIA IMAGES</u></h2>
+<p>To customize the social media images you have to do the following :</p>
+<ul><b>1)</b> You will open styles/Neon/template/overall_header.html .</ul>
+<ul><b>2)</b> Find 	"div id="social" and edit you social media's id .</ul>
+<ul><b>3)</b> You can find more social media images in styles/Neon/theme/images. There are also icons for flickr, technorati, delicious.....</ul>
+<img src="images/sm.png" />
+
+<h2><u>CREDITS</u></h2>
+<h4><u>JS</u></h4>
+<ul><b>1)</b> UlTop jQuery Plugin by Matt Varone</ul>
+<ul><b>2)</b> Collapse-Categories by Christian Bullock</ul>
+<ul><b>3)</b> Slide-Panel by Webdesignerwall.com</ul>
+
+<h4><u>IMAGES-ICONS</u></h4>
+<ul><b>1)</b> Background Image by Subtlepatterns.com/</ul>
+<ul><b>2)</b> YooIcons Social Bookmarks by Yootheme.com/</ul>
+<ul><b>3)</b> Some icons by Yusuke Kamiyamane (Fugue - http://p.yusukekamiyamane.com/). </ul>
+
+<h4><u>FONTS</u></h4>
+<ul><b>1)</b> Fonts by Fontsquirrel.com</ul>
+
+<br />
+<center> <p><b>Author :</b> Aristotelis Georgoulis ( 4ris ) | <b>Website :</b> www.4ris.info | <b>Email :</b> 4ris@4ris.info </p></center>
+
+
+
+
+<div id="bottom"></div>
+</body>
+</html>

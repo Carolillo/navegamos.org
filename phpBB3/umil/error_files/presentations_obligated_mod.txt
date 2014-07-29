@@ -1,0 +1,8 @@
+Presentations obligated mod
+PHP Version: 5.3.0
+DBMS: MySQL 5.1.36-community-log
+phpBB3 Version: 3.0.7-PL1
+
+Agregando acp módulo: ACP_PRESENTATIONS_CONFIG
+ERROR: La categoría padre especificada para este módulo no existe.
+
