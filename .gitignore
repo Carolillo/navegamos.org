@@ -1,4 +1,12 @@
 .htaccess
+.htaccess.*
+.old
+.old.*
 config.*
 *.config.*
 error_log
+cache
+.buildpath
+.project
+.ftpquota
+.settings
